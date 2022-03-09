@@ -14,17 +14,19 @@ set incsearch
 set colorcolumn=80
 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-call plug#begin('~/.vim/plugged')
-
-Plug 'morhetz/gruvbox'
-Plug 'mbbill/undotree'
-Plug 'preservim/nerdtree'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'tell-k/vim-autopep8'
-
-call plug#end()
-
-set background=dark
-colorscheme gruvbox
+call plug#begin('~/.vim/plugged')                                               
+                                                                                
+Plug 'gruvbox-community/gruvbox'                                                
+"Plug 'mbbill/undotree'                                                         
+"Plug 'preservim/nerdtree'                                                      
+"Plug 'HerringtonDarkholme/yats.vim'                                            
+Plug 'itchyny/lightline.vim'                                                    
+                                                                                
+call plug#end()                                                                 
+                                                                                
+colorscheme gruvbox                                                             
+set background=dark                                                             
+set laststatus=2                                                                
+let g:lightline = {                                                             
+      \ 'colorscheme': 'wombat',                                                
+      \ }
